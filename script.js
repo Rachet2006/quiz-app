@@ -28,6 +28,7 @@ if (page === "questions-page"){
     const answerBox = document.getElementById("answer");
     const answerText = document.getElementById("answer-text");
     const nextBtn = document.getElementById("next");
+    const restartBtn = document.getElementById("restart");
     let qnum = 0;
     let currentAnswer = "";
     let Score = 0;
@@ -70,6 +71,11 @@ if (page === "questions-page"){
 
         console.log(q);
     }
+
+    restartBtn.addEventListener("click", () => {
+        localStorage.clear();
+        window.location.href = "index.html";
+    })
 
     nextBtn.addEventListener("click", () => {
         if(qnum > localStorage.getItem("amount")-1){

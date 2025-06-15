@@ -93,6 +93,9 @@ if (page === "questions-page"){
             })
             nextBtn.disabled = true;
         } else {
+            if(qnum == localStorage.getItem("amount")-1){
+                nextBtn.textContent="Score";
+            }
             loadQuestion();
         }
     })

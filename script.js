@@ -77,6 +77,11 @@ if (page === "questions-page"){
         window.location.href = "index.html";
     })
 
+    if(qnum == (localStorage.getItem("amount")-1)){
+        console.log("Change");
+        nextBtn.value="Score";
+    }
+    
     nextBtn.addEventListener("click", () => {
         if(qnum > localStorage.getItem("amount")-1){
             answerBox.style.display = "none";
@@ -94,9 +99,6 @@ if (page === "questions-page"){
             nextBtn.disabled = true;
         } else {
             loadQuestion();
-            if(qnum+1 == localStorage.getItem("amount")-1){
-                nextBtn.textContent="Score";
-            }
         }
     })
 

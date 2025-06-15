@@ -27,8 +27,20 @@ header h1 {
     background-color: white;
     border-radius: 10px;
     max-width: 500px;
-    margin: 40px auto;
+    margin: 40px;
     padding: 30px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     width: min(90%, 500px);
+    display: grid;
+    gap: 10px
+}
+
+#start{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    color: #2563eb;
+    font-weight: 300;
 }

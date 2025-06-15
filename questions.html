@@ -1,35 +1,86 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
-    <title>Quizz App</title>
-</head>
-<body data-page="questions-page">
-    <div class="wrapper">
-        <header>
-            <h1>Quiz App</h1>
-        </header>
+body{
+    background-color: rgb(0, 166, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
 
-        <main>
-            <section id="quiz-box">
-                <h2 id="question">Loading...</h2>
+.wrapper {
+    background-color: white;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
 
-                <input class="choice" type="button" value="True">
-                <br>
-                <input class="choice" type="button" value="False">
-            </section>
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1e3a8a;
+}
 
-            <section id="answer">
-                <h3 id="answer-text">Correct</h3>
-            </section>
+#question {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #111827;
+}
 
-            <section>
-                <input type="button" id="restart" value="Restart">
-                <input type="button" id="next" value="Next Question">
-            </section>
-        </main>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+
+.choice{
+    background-color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid antiquewhite; 
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input:hover {
+    background-color: #e0f2fe;
+}
+
+#answer {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#answer h3 {
+    font-size: 18px;
+    color: #065f46;
+}
+
+#next{
+    padding: 12px 20px;
+    padding-bottom: 2px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    color: #2563eb;
+    font-weight: 300;
+}
+
+#restart{
+    padding: 12px 20px;
+    padding-bottom: 2px;
+    float: left;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #2563eb;
+    font-weight: 300;
+}

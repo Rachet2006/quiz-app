@@ -80,6 +80,8 @@ if (page === "questions-page"){
     nextBtn.addEventListener("click", () => {
         if(qnum > localStorage.getItem("amount")-1){
             answerBox.style.display = "none";
+            nextBtn.hidden = true;
+            restartBtn.style.float = centre;
             questionEl.textContent = "All done - thanks for playing!";
             choices.forEach(choice => {
                 if(choice.value == "True"){
